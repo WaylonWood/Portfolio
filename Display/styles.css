@@ -73,7 +73,7 @@ header {
     text-decoration: none;
 }
 
-.social-icons a:hover {
+social-icons a:hover {
     color: #ddd;
 }
 
@@ -157,6 +157,70 @@ ul li:hover {
     opacity: 0.8;
 }
 
+.Projects, .Experience, .Education {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.project-card {
+    background-color: rgba(51, 51, 51, 0.3); /* 30% opacity */
+    border: 2px solid #333; /* Solid border */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0; /* Adjust margin for better spacing */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: row; /* Stack image and info horizontally */
+    align-items: center; /* Center align items */
+    text-align: left; /* Left align text */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+.project-card img {
+    width: 30%; /* Adjust width for rectangular shape */
+    height: auto;
+    border-radius: 10px; /* Round both sides of the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    margin: 10px; /* Add equal margins on all sides */
+}
+
+.project-info {
+    padding: 15px;
+    width: 70%; /* Adjust width for rectangular shape */
+}
+
+.project-info h3 {
+    margin: 0;
+    color: #fff;
+}
+
+.project-info p {
+    color: #ccc;
+}
+
+.About {
+    padding: 0px;
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.About p {
+    max-width: 80%; /* Match the width of the project cards */
+    margin: 3px 0; /* Add spacing between paragraphs */
+    text-align: left; /* Left-align the text */
+}
+
 /* Responsive Design */
 
 /* Styles for larger screens (desktops) */
@@ -174,6 +238,10 @@ ul li:hover {
         width: 50%;
         height: 100vh;
     }
+
+    .project-card {
+        width: 80%; /* Adjust width for larger screens */
+    }
 }
 
 /* Styles for medium screens (tablets) */
@@ -184,6 +252,10 @@ ul li:hover {
 
     .profile, .content {
         width: 80%;
+    }
+
+    .project-card {
+        width: 100%; /* Adjust width for medium screens */
     }
 }
 
@@ -213,5 +285,18 @@ ul li:hover {
     .social-icons button {
         font-size: 14px;
         padding: 8px 16px;
+    }
+
+    .project-card {
+        width: 100%; /* Adjust width for small screens */
+        flex-direction: column;
+    }
+
+    .project-card img {
+        width: 100%; /* Adjust width for small screens */
+    }
+
+    .project-info {
+        width: 100%; /* Adjust width for small screens */
     }
 }
