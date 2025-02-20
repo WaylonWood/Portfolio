@@ -1,3 +1,4 @@
+/* Maybe add some breatheable background, maybe hombcomb shapes */
 body {
     background-color: black;
     color: white;
@@ -5,12 +6,21 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     overflow: hidden;
 }
 
+/* Style the container to center the header and main content */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
 header {
-    width: 35%;
+    width: 50%; /* Increase the width of the header by 10% more */
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -35,7 +45,7 @@ header {
     align-items: center;
 }
 
-.social-icons button {
+.social-icons .resume-button button {
     background-color: white;
     color: black;
     border: none;
@@ -45,16 +55,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
-    border-radius: 7px; 
+    border-radius: 7px;
 }
 
-.social-icons button:hover {
+.social-icons .resume-button button i {
+    margin-right: 10px;
+}
+
+.social-icons .resume-button button:hover {
     background-color: #ddd;
-}
-
-.social-icons button i {
-    margin-right: 10px;
 }
 
 .social-icons a {
@@ -69,20 +78,28 @@ header {
 }
 
 main {
-    width: 65%; 
+    width: 50%; /* Adjust the width of the main section */
     padding: 20px;
+    padding-top: 170px; /* Add padding to start content at the top of the profile photo height */
     box-sizing: border-box;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Align content to the top */
 }
 
 section {
     margin-bottom: 40px;
+    width: 100%; /* Ensure sections take full width */
 }
 
 h2, h3 {
     color: #ddd;
     margin-bottom: 5px;
     margin-top: 5px;
+    text-align: left; /* Align text to the left */
+    align-self: flex-start; /* Align elements to the left */
 }
 
 ul {
@@ -92,6 +109,7 @@ ul {
     flex-wrap: wrap;
     margin-top: 5px;
     margin-bottom: 5px;
+    justify-content: flex-start; /* Align list items to the left */
 }
 
 ul li {
@@ -137,4 +155,63 @@ ul.Practices li {
 
 ul li:hover {
     opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Styles for larger screens (desktops) */
+@media (min-width: 1024px) {
+    body {
+        flex-direction: row;
+    }
+
+    header {
+        width: 50%;
+        height: 100vh;
+    }
+
+    main {
+        width: 50%;
+        height: 100vh;
+    }
+}
+
+/* Styles for medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header, main {
+        width: 100%;
+    }
+
+    .profile, .content {
+        width: 80%;
+    }
+}
+
+/* Styles for small screens (mobile) */
+@media (max-width: 767px) {
+    header, main {
+        width: 100%;
+    }
+
+    .profile, .content {
+        width: 95%;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+
+    .social-icons button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
