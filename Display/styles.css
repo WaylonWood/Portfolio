@@ -204,6 +204,7 @@ ul li:hover {
 
 .project-info p {
     color: #ccc;
+    margin-bottom: 2px; /* Add 2px of spacing between paragraphs */
 }
 
 .About {
@@ -219,6 +220,8 @@ ul li:hover {
     max-width: 80%; /* Match the width of the project cards */
     margin: 3px 0; /* Add spacing between paragraphs */
     text-align: left; /* Left-align the text */
+    margin-bottom: 2px; /* Add 2px of spacing between paragraphs */
+    line-height: 1.6; /* Increase line spacing */
 }
 
 /* Responsive Design */
