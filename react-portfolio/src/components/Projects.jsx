@@ -20,8 +20,8 @@ const Projects = () => {
       description: "My personal portfolio website is a modern, responsive platform built with React, Vite, HTML, and CSS. It’s designed to showcase my projects, skills, and experience in a clean and visually appealing way. With a focus on speed and usability, the site provides an interactive browsing experience while highlighting my work and technical expertise.",
       tech: ["React", "Vite", "HTML", "Tailwind CSS"],
   image: "/MyPortfolio.webp",
-      liveUrl: "",
-      githubUrl: ""
+      liveUrl: "https://waylonwood.dev",
+      githubUrl: "https://github.com/WaylonWood/Portfolio"
     },
   ];
 

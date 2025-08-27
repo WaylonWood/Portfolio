@@ -68,6 +68,14 @@ const Navigation = () => {
               {item.label}
             </motion.a>
           ))}
+          <a
+            href="/Waylon's Resume.pdf"
+            download
+            className="nav-link"
+            style={{ marginLeft: '12px' }}
+          >
+            Resume
+          </a>
         </div>
 
         <button 
