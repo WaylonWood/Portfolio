@@ -50,16 +50,16 @@ const Experience = () => {
       icon: <Award size={24} />,
       description: "Served with distinction in the United States Marine Corps, progressing through specialized technical roles in electronic systems maintenance, satellite communications, and microminiature repair operations. Led teams of up to 22 technicians while ensuring operational readiness of critical military communication systems.",
       achievements: [
-        "🎖️ Led 22 electronic technicians in maintenance and repair of sophisticated electronic systems",
-        "🔧 Developed and implemented updated quality control processes improving product delivery",
-        "📡 Managed satellite communication systems ensuring reliable connectivity in operational environments",
-        "🔬 Specialized in microminiature repair of advanced electronic components and assemblies",
-        "📊 Analyzed performance metrics and implemented process improvements enhancing repair turnaround times",
-        "👥 Conducted comprehensive training sessions for junior technicians fostering skill development",
-        "📋 Maintained detailed technical documentation including service reports and compliance records",
-        "⚙️ Coordinated system upgrades and installations ensuring timely completion within budget",
-        "🔍 Performed advanced troubleshooting techniques minimizing system downtime",
-        "🤝 Collaborated with joint-service teams integrating electronic systems into operational frameworks"
+        "Led 22 electronic technicians in maintenance and repair of sophisticated electronic systems",
+        "Developed and implemented updated quality control processes improving product delivery",
+        "Managed satellite communication systems ensuring reliable connectivity in operational environments",
+        "Specialized in microminiature repair of advanced electronic components and assemblies",
+        "Analyzed performance metrics and implemented process improvements enhancing repair turnaround times",
+        "Conducted comprehensive training sessions for junior technicians fostering skill development",
+        "Maintained detailed technical documentation including service reports and compliance records",
+        "Coordinated system upgrades and installations ensuring timely completion within budget",
+        "Performed advanced troubleshooting techniques minimizing system downtime",
+        "Collaborated with joint-service teams integrating electronic systems into operational frameworks"
       ],
       roles: [
         {
