@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://waylonwood.dev/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://waylonwood.dev/#about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://waylonwood.dev/#experience</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://waylonwood.dev/#projects</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://waylonwood.dev/#skills</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://waylonwood.dev/#contact</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>
