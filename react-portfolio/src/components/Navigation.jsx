@@ -28,7 +28,7 @@ const Navigation = () => {
       });
     }
   };
-
+              <img src="/WWLogo.webp" alt="WW Logo" style={{ width: '96px', height: '96px', objectFit: 'contain' }} />
   const navItems = [
     { href: '#about', label: 'About' },
     { href: '#skills', label: 'Skills' },
@@ -50,7 +50,7 @@ const Navigation = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          WW
+          <img src="/WWLogo.webp" alt="WW Logo" />
         </motion.a>
 
         <div className="nav-menu">
