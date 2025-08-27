@@ -85,7 +85,8 @@ const Hero = () => {
             </motion.a>
             
             <motion.a
-              href="#"
+              href={"/Waylon's Resume.pdf"}
+              download
               whileHover={{ 
                 scale: 1.05,
                 borderColor: "var(--primary-glow)"
