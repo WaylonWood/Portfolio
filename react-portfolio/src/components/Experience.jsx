@@ -7,18 +7,18 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Full Stack Developer (Need to add things)",
+      title: "Full Stack Developer",
       company: "Freelance Projects",
       location: "Remote",
-      period: "2023 - Present",
+      period: "2025 - Present",
       type: "Development",
       icon: <Code size={24} />,
       description: "Developing modern web applications using React, Node.js, and cloud technologies. Focus on beautiful, responsive designs and custom user experiences.",
       achievements: [
-        "Built 5+ full-stack applications with modern tech stacks",
-        "Implemented responsive designs for optimal user experience",
-        "Integrated third-party APIs and database management",
-        "Deployed applications using cloud platforms and CI/CD"
+        "Building full-stack applications with modern tech stacks",
+        "Implementing responsive designs for optimal user experience",
+        "Integrating third-party APIs and database management",
+        "Deploying applications using cloud platforms and CI/CD"
       ],
       skills: ["React", "Node.js", "JavaScript", "MongoDB", "Git"]
     },
@@ -32,8 +32,8 @@ const Experience = () => {
       icon: <Laptop size={24} />,
       description: "Software development apprenticeship program focusing on full-stack web development, combining theoretical learning with hands-on project experience and industry mentorship.",
       achievements: [
-        "Mastered full-stack development fundamentals and advanced concepts",
-        "Completed 15+ comprehensive projects demonstrating practical skills",
+        "Learning full-stack development fundamentals and advanced concepts",
+        "Completed multiple comprehensive projects demonstrating practical skills",
         "Collaborated on team projects using Agile and Scrum methodologies",
         "Maintained exceptional performance throughout intensive curriculum",
         "Developed expertise in modern web technologies and frameworks"
