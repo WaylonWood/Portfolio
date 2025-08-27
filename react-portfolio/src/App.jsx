@@ -1,11 +1,12 @@
-import React from 'react';
+// removed duplicate React import
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects_simple';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
+import React, { Suspense, lazy } from 'react';
+const About = lazy(() => import('./components/About'));
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
+const Experience = lazy(() => import('./components/Experience'));
+const Contact = lazy(() => import('./components/Contact'));
 import ParticleSystem from './components/ParticleSystem';
 import './App.css';
 
@@ -16,11 +17,13 @@ function App() {
       <Navigation />
       <main className="main-content">
         <Hero />
+    <Suspense fallback={<div className="loading">Loading...</div>}>
         <About />
         <Skills />
         <Projects />
         <Experience />
         <Contact />
+    </Suspense>
       </main>
     </div>
   );

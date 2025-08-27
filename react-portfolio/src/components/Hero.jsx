@@ -38,16 +38,18 @@ const Hero = () => {
             variants={itemVariants}
             className="profile-image-container"
           >
-            <motion.img
-              src="https://res.cloudinary.com/dohzdhybo/image/upload/v1740688408/IMG_6345_zrjyzp.png"
-              alt="Waylon Wood"
-              className="profile-image"
-              whileHover={{ 
-                scale: 1.1, 
-                filter: "brightness(1.2)"
-              }}
-              transition={{ duration: 0.4 }}
-            />
+              <motion.img
+                src="https://res.cloudinary.com/dohzdhybo/image/upload/v1740688408/IMG_6345_zrjyzp.webp"
+                srcSet="https://res.cloudinary.com/dohzdhybo/image/upload/v1740688408/IMG_6345_zrjyzp.webp 1x, https://res.cloudinary.com/dohzdhybo/image/upload/v1740688408/IMG_6345_zrjyzp.png 1x"
+                alt="Waylon Wood"
+                className="profile-image"
+                fetchpriority="high"
+                whileHover={{ 
+                  scale: 1.1, 
+                  filter: "brightness(1.2)"
+                }}
+                transition={{ duration: 0.4 }}
+              />
           </motion.div>
 
           {/* Name and Title */}

@@ -1,225 +1,149 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, Star, Zap } from 'lucide-react';
 import './Projects.css';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = React.useState('All');
-  
   const projects = [
     {
-      title: "Task Manager Pro",
-      description: "A sophisticated task management application featuring real-time collaboration, advanced filtering, and intuitive drag-and-drop functionality. Built with modern React patterns and a robust backend architecture.",
-      image: "/TaskManager.png",
-      tech: ["React", "Node.js", "MongoDB", "Express", "Socket.io", "JWT"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-      category: "Full Stack"
+      id: 1,
+      title: "Task Manager",
+      description: "A full-stack task management web app built with Python and Flask, featuring user authentication, project and workspace management, dark mode, and a responsive UI. Uses SQLite with Alembic for database migrations and is easy to deploy on platforms like Vercel.",
+      tech: ["Python","SQLite", "Alembic", "HTML", "CSS", "Vercel"],
+  image: "/TaskManager.webp",
+      liveUrl: "https://wood-task-manager-web.vercel.app",
+      githubUrl: "https://github.com/WaylonWood/Task-Manager-Web"
     },
     {
-      title: "Cyberpunk Portfolio",
-      description: "An immersive, responsive portfolio website with futuristic design elements, smooth animations, and cutting-edge UI/UX. Features custom particle systems and advanced motion graphics.",
-      image: "https://res.cloudinary.com/dohzdhybo/image/upload/v1740688519/Screenshot_2025-02-23_at_12.54.44_PM_cqhgbi.png",
-      tech: ["React", "Framer Motion", "CSS3", "Vite", "Lucide"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "Frontend"
+      id: 2,
+      title: "My Portfolio",
+      description: "My personal portfolio website is a modern, responsive platform built with React, Vite, HTML, and CSS. It’s designed to showcase my projects, skills, and experience in a clean and visually appealing way. With a focus on speed and usability, the site provides an interactive browsing experience while highlighting my work and technical expertise.",
+      tech: ["React", "Vite", "HTML", "Tailwind CSS"],
+  image: "/MyPortfolio.webp",
+      liveUrl: "",
+      githubUrl: ""
     },
-    {
-      title: "E-Commerce Revolution",
-      description: "Next-generation e-commerce platform with AI-powered recommendations, real-time inventory management, and seamless payment processing. Features admin dashboard and analytics.",
-      image: "https://via.placeholder.com/600x400/1a1a2e/00d9ff?text=E-Commerce",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis", "AWS"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "Full Stack"
-    },
-    {
-      title: "API Gateway",
-      description: "High-performance microservices API gateway with rate limiting, authentication, and monitoring. Handles millions of requests with sub-millisecond latency.",
-      image: "https://via.placeholder.com/600x400/1a1a2e/8b5cf6?text=API+Gateway",
-      tech: ["Node.js", "Docker", "Kubernetes", "Redis", "GraphQL"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "Backend"
-    },
-    {
-      title: "Data Visualization Studio",
-      description: "Interactive data visualization platform with real-time analytics, custom chart builders, and collaborative features. Transform complex data into stunning insights.",
-      image: "https://via.placeholder.com/600x400/1a1a2e/ec4899?text=Data+Viz",
-      tech: ["React", "D3.js", "Python", "FastAPI", "WebSockets"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "Frontend"
-    },
-    {
-      title: "AI Chat Assistant",
-      description: "Intelligent conversational AI assistant with natural language processing, context awareness, and multi-platform integration. Powered by advanced machine learning models.",
-      image: "https://via.placeholder.com/600x400/1a1a2e/00ff87?text=AI+Chat",
-      tech: ["Python", "TensorFlow", "React", "FastAPI", "WebRTC"],
-      liveUrl: "#",
-      githubUrl: "#",
-      category: "AI/ML"
-    }
   ];
-  
-  const categories = ['All', 'Full Stack', 'Frontend', 'Backend', 'AI/ML'];
-  
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
+  const sparkleVariants = {
+    animate: {
+      scale: [1, 1.2, 1],
+      rotate: [0, 180, 360],
+      opacity: [0.7, 1, 0.7],
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"
       }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
-
   return (
-    <section id="projects" className="projects-section">
-      {/* Floating background elements */}
-      <div className="projects-float-1"></div>
-      <div className="projects-float-2"></div>
-      <div className="projects-float-3"></div>
-      
+    <section className="projects-section" id="projects">
       <div className="projects-container">
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="projects-header"
         >
-          <motion.h2 
-            variants={itemVariants}
-            className="projects-title"
-          >
-            Featured Projects
-          </motion.h2>
+          <div className="title-container">
+            <motion.div
+              variants={sparkleVariants}
+              animate="animate"
+              className="title-sparkle sparkle-1"
+            >
+              <Sparkles size={24} />
+            </motion.div>
+            <motion.div
+              variants={sparkleVariants}
+              animate="animate"
+              className="title-sparkle sparkle-2"
+              style={{ animationDelay: '1s' }}
+            >
+              <Star size={20} />
+            </motion.div>
+            <motion.div
+              variants={sparkleVariants}
+              animate="animate"
+              className="title-sparkle sparkle-3"
+              style={{ animationDelay: '2s' }}
+            >
+              <Zap size={22} />
+            </motion.div>
+            
+            <motion.h2 
+              className="projects-title"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Featured Projects
+            </motion.h2>
+          </div>
           
-          <motion.p
-            variants={itemVariants}
+          <motion.p 
             className="projects-subtitle"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Innovative solutions crafted with cutting-edge technologies
+            A showcase of my recent work and personal projects
           </motion.p>
+        </motion.div>
 
-          {/* Project Filter */}
-          <motion.div 
-            variants={itemVariants}
-            className="project-filters"
-          >
-            {categories.map((category) => (
-              <motion.button
-                key={category}
-                className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
-                onClick={() => setActiveFilter(category)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </motion.div>
-
-          <motion.div 
-            variants={containerVariants}
-            className="projects-grid"
-            layout
-          >
-            {filteredProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                variants={itemVariants}
-                className={`project-card ${project.featured ? 'featured' : ''}`}
-                whileHover={{ 
-                  y: -10,
-                  scale: 1.02,
-                }}
-                layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="project-image-container">
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="project-card"
+            >
+              <div className="project-image">
+                <picture>
+                  <source srcSet={project.image.replace('.png', '.webp').replace('.jpg', '.webp').replace('.jpeg', '.webp')} type="image/webp" />
                   <img
                     src={project.image}
                     alt={project.title}
                     className="project-image"
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <div className="project-image-overlay"></div>
+                </picture>
+                <div className="project-overlay">
+                  <div className="project-links">
+                    <a href={project.liveUrl} className="project-link live-link">
+                      <ExternalLink size={20} />
+                    </a>
+                    <a href={project.githubUrl} className="project-link github-link">
+                      <Github size={20} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="project-content">
+                <div className="project-header">
+                  <h3 className="project-title">{project.title}</h3>
                 </div>
                 
-                <div className="project-content">
-                  <div className="project-header">
-                    <div className="project-title-section">
-                      <h3 className="project-title">{project.title}</h3>
-                      <span className="project-category">{project.category}</span>
-                    </div>
-                    <div className="project-links">
-                      <motion.a
-                        href={project.liveUrl}
-                        className="project-link live-link"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.95 }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="View Live Demo"
-                      >
-                        <ExternalLink size={18} />
-                      </motion.a>
-                      <motion.a
-                        href={project.githubUrl}
-                        className="project-link github-link"
-                        whileHover={{ scale: 1.1, rotate: -5 }}
-                        whileTap={{ scale: 0.95 }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="View Source Code"
-                      >
-                        <Github size={18} />
-                      </motion.a>
-                    </div>
-                  </div>
-                  
-                  <p className="project-description">
-                    {project.description}
-                  </p>
-                  
-                  <div className="project-tech">
-                    {project.tech.map((tech, techIndex) => (
-                      <motion.span
-                        key={tech}
-                        className="tech-tag"
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: techIndex * 0.1 }}
-                      >
-                        {tech}
-                      </motion.span>
-                    ))}
-                  </div>
+                <p className="project-description">{project.description}</p>
+                
+                <div className="project-tech">
+                  {project.tech.map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

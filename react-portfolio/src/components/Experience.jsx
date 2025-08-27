@@ -24,7 +24,7 @@ const Experience = () => {
     },
     {
       id: 2,
-      title: "Software Development Apprentice",
+      title: "Software Engineering Apprentice",
       company: "Creating Coding Careers",
       location: "Remote",
       period: "August 2025 - Present",

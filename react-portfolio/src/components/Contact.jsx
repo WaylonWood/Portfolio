@@ -40,7 +40,7 @@ const Contact = () => {
       title: "Email",
       text: "wwoodrvms@gmail.com",
       link: "mailto:wwoodrvms@gmail.com",
-      description: "Drop me a line anytime",
+      description: "Reach out to me anytime",
       color: "#00d9ff",
       gradient: "linear-gradient(135deg, #00d9ff, #0099cc)"
     },

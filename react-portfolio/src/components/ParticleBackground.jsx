@@ -128,8 +128,11 @@ const ParticleBackground = () => {
 
     // Create particles
     const particles = [];
-    const particleCount = Math.min(80, Math.floor(canvas.width * canvas.height / 15000));
-    
+    // Lower particle count for mobile devices
+    const isMobile = window.matchMedia('(max-width: 600px)').matches;
+    const particleCount = isMobile
+      ? Math.min(30, Math.floor(canvas.width * canvas.height / 30000))
+      : Math.min(80, Math.floor(canvas.width * canvas.height / 15000));
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
