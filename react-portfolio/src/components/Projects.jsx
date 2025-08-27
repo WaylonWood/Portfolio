@@ -116,10 +116,10 @@ const Projects = () => {
                 </picture>
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href={project.liveUrl} className="project-link live-link">
+                    <a href={project.liveUrl} className="project-link live-link" target="_blank" rel="noopener noreferrer">
                       <ExternalLink size={20} />
                     </a>
-                    <a href={project.githubUrl} className="project-link github-link">
+                    <a href={project.githubUrl} className="project-link github-link" target="_blank" rel="noopener noreferrer">
                       <Github size={20} />
                     </a>
                   </div>
