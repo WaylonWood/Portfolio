@@ -2,7 +2,7 @@
   border-color: rgba(255,255,255,0.1) !important;
   box-shadow: 0 12px 40px rgba(0,0,0,0.5) !important;
 }
-/* Contact Section - Spectacular Ultra-Modern Design */
+/* Contact */
 .contact-section {
   min-height: 100vh;
   position: relative;
@@ -11,19 +11,7 @@
   padding: 120px 0;
 }
 
-/* Dynamic Mouse-Following Background */
-.contact-mouse-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 1;
-  transition: background 0.3s ease;
-}
-
-/* Floating Particles System */
+/* Particles */
 .contact-particles {
   position: absolute;
   top: 0;
@@ -64,7 +52,7 @@
 .particle-19 { top: 35%; left: 90%; }
 .particle-20 { top: 55%; left: 5%; }
 
-/* Geometric Background Shapes */
+/* Background */
 .contact-geometric-bg {
   position: absolute;
   top: 0;
@@ -136,7 +124,7 @@
   text-align: center;
 }
 
-/* Spectacular Header with Sparkles */
+/* Header */
 .contact-header {
   margin-bottom: 6rem;
   position: relative;
@@ -221,7 +209,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Main Content Layout */
+/* Main */
 .contact-main-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -236,7 +224,7 @@
   }
 }
 
-/* Ultra-Enhanced Contact Cards */
+/* Cards */
 .contact-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -398,7 +386,7 @@
   transform: scale(1.05);
 }
 
-/* Revolutionary Contact Form */
+/* Form */
 .contact-form-wrapper {
   position: relative;
   background: rgba(0, 0, 0, 0.3);
@@ -460,6 +448,7 @@
 }
 
 
+
 .contact-card {
   background: rgba(10, 20, 40, 0.7);
   backdrop-filter: blur(25px);
@@ -470,6 +459,8 @@
   text-align: left;
   color: #fff;
 }
+
+.contact-card-group {
   gap: 2rem;
 }
 
@@ -509,7 +500,7 @@
   position: relative;
   backdrop-filter: blur(10px);
   
-  /* Aggressive autocomplete suppression */
+  /* Autocomplete */
   -webkit-autocomplete: off;
   -webkit-autofill: off;
   -webkit-appearance: none;
@@ -517,13 +508,13 @@
   appearance: none;
 }
 
-/* Hide any browser autocomplete dropdowns */
+/* Autocomplete */
 .form-input::-webkit-list-button,
 .form-input::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 
-/* Force remove any autocomplete styling */
+/* Autocomplete */
 .form-input:-webkit-autofill,
 .form-input:-webkit-autofill:hover,
 .form-input:-webkit-autofill:focus,
@@ -534,7 +525,7 @@
   background-image: none !important;
 }
 
-/* Hide autocomplete suggestions completely */
+/* Autocomplete */
 .contact-form {
   position: relative;
   z-index: 1;
@@ -544,7 +535,7 @@
   z-index: inherit;
 }
 
-/* Aggressive autocomplete hiding - multiple approaches */
+/* Autocomplete */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -560,7 +551,7 @@ textarea:-webkit-autofill:active {
   background-image: none !important;
 }
 
-/* Hide browser dropdown suggestions */
+/* Autocomplete */
 .form-input[type="text"]::-webkit-contacts-auto-fill-button,
 .form-input[type="text"]::-webkit-credentials-auto-fill-button {
   visibility: hidden;
@@ -569,7 +560,7 @@ textarea:-webkit-autofill:active {
   right: 0;
 }
 
-/* Kill all possible autocomplete dropdowns */
+/* Autocomplete */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -577,7 +568,7 @@ textarea {
   -webkit-autocomplete: off !important;
 }
 
-/* Additional nuclear option - hide any potential dropdowns */
+/* Autocomplete */
 *[role="listbox"],
 *[role="combobox"],
 *[class*="autocomplete"],
@@ -590,14 +581,14 @@ textarea {
   overflow: hidden !important;
 }
 
-/* Target specific browser autocomplete popups */
+/* Autocomplete */
 div[role="listbox"],
 div[class*="pac-container"],
 .pac-container {
   display: none !important;
 }
 
-/* Chrome specific */
+/* Autocomplete */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -648,7 +639,7 @@ input::-webkit-inner-spin-button {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Next-Level Submit Button */
+/* Button */
 .submit-button {
   position: relative;
   background: transparent;
@@ -726,7 +717,7 @@ input::-webkit-inner-spin-button {
     0 0 60px rgba(0, 217, 255, 0.6);
 }
 
-/* Revolutionary Social Constellation */
+/* Social */
 .social-section {
   margin-top: 6rem;
 }
@@ -906,7 +897,7 @@ input::-webkit-inner-spin-button {
   50% { transform: translateY(-10px); }
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 1400px) {
   .contact-title {
     font-size: 4.5rem;
@@ -1117,8 +1108,6 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-/* Remove the duplicate background pseudo-element */
-
 .form-group {
   margin-bottom: 2rem;
   position: relative;
@@ -1218,7 +1207,7 @@ input::-webkit-inner-spin-button {
   transform: translateY(-1px) scale(1.01);
 }
 
-/* Social links at bottom */
+/* Social */
 .contact-social {
   display: flex;
   justify-content: center;
@@ -1277,7 +1266,7 @@ input::-webkit-inner-spin-button {
   z-index: 1;
 }
 
-/* Floating elements */
+/* Floating */
 .contact-float-1,
 .contact-float-2,
 .contact-float-3 {
@@ -1328,7 +1317,7 @@ input::-webkit-inner-spin-button {
   50% { background-position: 100% 50%; }
 }
 
-/* Responsive design */
+/* Responsive */
 @media (max-width: 768px) {
   .contact-section {
     padding: 80px 0;

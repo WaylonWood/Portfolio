@@ -1,4 +1,4 @@
-/* Experience Section */
+/* Experience */
 .experience-section {
   padding: 120px 0;
   background: transparent;
@@ -35,7 +35,7 @@
   margin-bottom: 4rem;
 }
 
-/* Title Container and Sparkles */
+/* Title */
 .title-container {
   position: relative;
   display: inline-block;
@@ -246,7 +246,7 @@
   color: #ec4899;
 }
 
-/* Military Roles Section */
+/* Military */
 .experience-roles {
   margin-bottom: 1.5rem;
 }
@@ -322,7 +322,7 @@
   color: #00d9ff;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .experience-section {
     padding: 80px 0;
