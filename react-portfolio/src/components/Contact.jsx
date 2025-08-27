@@ -11,6 +11,7 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
   const controls = useAnimation();
 
   const handleChange = (e) => {
@@ -23,15 +24,30 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    setSubmitSuccess(false);
+    try {
+      const response = await fetch('https://formspree.io/f/mblajvzo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+      if (response.ok) {
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitSuccess(false);
+      }
+    } catch (error) {
+      setSubmitSuccess(false);
+    }
     setIsSubmitting(false);
-    console.log('Form submitted:', formData);
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
   };
 
   const contactInfo = [
@@ -304,6 +320,11 @@ const Contact = () => {
                   Start a Conversation
                 </h3>
                 <form onSubmit={handleSubmit} className="contact-form" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" name={`contact-form-${Date.now()}`}> 
+                  {submitSuccess && (
+                    <div className="form-success-message" style={{color: '#00d9ff', marginBottom: '1rem', fontWeight: 'bold'}}>
+                      Thank you! Your message has been sent.
+                    </div>
+                  )}
                   {/* Honeypot fields to confuse autocomplete */}
                   <input type="text" name="username" autoComplete="username" style={{display: 'none'}} tabIndex="-1" />
                   <input type="email" name="email" autoComplete="email" style={{display: 'none'}} tabIndex="-1" />

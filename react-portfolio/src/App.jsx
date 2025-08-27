@@ -2,6 +2,7 @@
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import React, { Suspense, lazy } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 const About = lazy(() => import('./components/About'));
 const Skills = lazy(() => import('./components/Skills'));
 const Projects = lazy(() => import('./components/Projects'));
@@ -17,13 +18,14 @@ function App() {
       <Navigation />
       <main className="main-content">
         <Hero />
-    <Suspense fallback={<div className="loading">Loading...</div>}>
+  <Suspense fallback={<div className="loading">Loading...</div>}>
         <About />
         <Skills />
         <Projects />
         <Experience />
         <Contact />
     </Suspense>
+    <Analytics />
       </main>
     </div>
   );
